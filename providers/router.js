@@ -6,7 +6,7 @@ export default {
 		const Vue = app.make(symbols.Vue);
 		Vue.use(Router);
 
-		app.register(symbols.router, () => {
+		app.bind(symbols.router, () => {
 			const routes = app.make(symbols.routes);
 
 			const router = new Router({

@@ -3,6 +3,6 @@ import * as symbols from '../symbols';
 
 export default {
 	register(app) {
-		app.bind(symbols.Vue, Vue);
+		app.instance(symbols.Vue, Vue);
 	},
 };

@@ -2,11 +2,11 @@ import * as symbols from '../symbols';
 
 export default {
 	register(app) {
-		app.register(symbols.rootProps, () => ({
+		app.bind(symbols.rootProps, () => ({
 			render: h => h('router-view'),
 		}));
 
-		app.register(symbols.root, () => {
+		app.bind(symbols.root, () => {
 			const Vue = app.make(symbols.Vue);
 
 			const props = app.make(symbols.rootProps);

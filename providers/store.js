@@ -6,10 +6,19 @@ export default {
 		const Vue = app.make(symbols.Vue);
 		Vue.use(Vuex);
 
-		app.register(symbols.store, () => {
-			const store = new Store({});
+		app.bind(symbols.store, () => {
+			const modules = app.make(symbols.modules);
+
+			const store = new Store({
+				modules,
+			});
 
 			return store;
+		});
+
+		app.rebinding(symbols.modules, (app, modules) => {
+			const store = app.make(symbols.store);
+			store.hotUpdate({ modules });
 		});
 
 		app.extend(symbols.rootProps, (root) => {
