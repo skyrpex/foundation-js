@@ -40,7 +40,7 @@ export default class Application {
 	}
 
 	has(symbol) {
-		return this.instances[symbol] !== null || this.callbacks[symbol] !== null;
+		return this.instances[symbol] != null || this.callbacks[symbol] != null;
 	}
 
 	bind(symbol, value) {
