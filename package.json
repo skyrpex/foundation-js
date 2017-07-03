@@ -1,6 +1,9 @@
 {
   "name": "@skyrpex/foundation",
   "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "lodash": "^4.17.4",
     "vue": "^2.3.4",
