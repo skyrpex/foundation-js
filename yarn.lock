@@ -2,7 +2,13 @@
 # yarn lockfile v1
 
 
-lodash@^4.17.4:
+"@skyrpex/remember@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@skyrpex/remember/-/remember-1.0.1.tgz#20ebc7c1d6701f7a49b53fb4cbd8a6f022a8a377"
+  dependencies:
+    lodash "^3.7 || ^4.0"
+
+"lodash@^3.7 || ^4.0", lodash@^4.17.4:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
